@@ -1,6 +1,6 @@
 `platform :ios, '9.0'
 
-target 'MAVSDK_Swift' do
+target 'Dronecode-SDK-Swift' do
 use_frameworks!
 
 $gRPCVersion = '>= 0.4.2'
@@ -11,14 +11,14 @@ Pods for MAVSDK_Swift
 pod 'SwiftGRPC', $gRPCVersion
 pod 'RxSwift', $rxVersion
 
-target 'MAVSDK_SwiftTests' do
+target 'Dronecode-SDK-SwiftTests' do
 inherit! :search_paths
 # Pods for testing
 pod 'RxBlocking', $rxVersion
 pod 'RxTest', $rxVersion
 end
 
-target 'MAVSDK_SwiftIntegrationTests' do
+target 'Dronecode_SDK_SwiftIntegrationTests' do
 inherit! :search_paths
 # Pods for testing
 pod 'RxBlocking', $rxVersion

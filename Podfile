@@ -6,7 +6,7 @@ use_frameworks!
 $gRPCVersion = '>= 0.4.2'
 $rxVersion = '>= 4.0'
 
-Pods for MAVSDK_Swift
+# Pods for MAVSDK_Swift
 
 pod 'SwiftGRPC', $gRPCVersion
 pod 'RxSwift', $rxVersion

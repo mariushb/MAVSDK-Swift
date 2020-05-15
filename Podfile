@@ -1,27 +1,26 @@
-platform :ios, '9.0'
+platform :ios, '11.0'
 
-target 'Dronecode-SDK-Swift' do
+target 'MAVSDK_Swift' do
   use_frameworks!
 
-  $gRPCVersion = '= 0.4.2'
-  $rxVersion = '= 4.0'
+  $rxVersion = 'https://github.com/ReactiveX/RxSwift.git'
 
   # Pods for Dronecode-SDK-Swift
-  pod 'SwiftGRPC', $gRPCVersion
-  pod 'RxSwift', $rxVersion
+  pod 'SwiftGRPC', :git => 'https://github.com/JonasVautherin/grpc-swift.git'
+  pod 'RxSwift', :git => $rxVersion
 
-  target 'Dronecode-SDK-SwiftTests' do
+  target 'MAVSDK_SwiftTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'RxBlocking', $rxVersion
-    pod 'RxTest', $rxVersion
+    pod 'RxBlocking', :git => $rxVersion
+    pod 'RxTest', :git => $rxVersion
   end
 
-  target 'Dronecode_SDK_SwiftIntegrationTests' do
+  target 'MAVSDK_SwiftIntegrationTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'RxBlocking', $rxVersion
-    pod 'RxTest', $rxVersion
+    pod 'RxBlocking', :git => $rxVersion
+    pod 'RxTest', :git => $rxVersion
   end
 end
 
